@@ -23,6 +23,8 @@ window.addEventListener("load", function () {
     });
 
   let form = document.querySelector("form");
+  let list = document.getElementById("faultyItems");
+
   form.addEventListener("submit", function (event) {
     event.preventDefault();
 
@@ -31,13 +33,6 @@ window.addEventListener("load", function () {
     let fuelLevel = document.querySelector("input[name=fuelLevel]").value;
     let cargoMass = document.querySelector("input[name=cargoMass]").value;
 
-    formSubmission(
-      document,
-      document.getElementById("faultyItems"),
-      pilot,
-      copilot,
-      fuelLevel,
-      cargoMass
-    );
+    formSubmission(document, list, pilot, copilot, fuelLevel, cargoMass);
   });
 });
